@@ -1,65 +1,134 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
-}
-
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  position: relative;
-  opacity: 0.65;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-.bgimg-1 {
-  background-image: url("wolkenheader.jpg");
-  height: 40%;
-  position: sticky;
-}
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 200%;
-  letter-spacing: 10px;
-}
-
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
-}
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <link rel="stylesheet" href="newclouds.css">
+  <link rel="icon" type="image/png" href="pics/icons8-cloud-100.png">
 </head>
-<body>
 
-<div class="bgimg-1">
-  <div class="caption">
-    <span class="border">Wolken</span><br>
-    <span class="border">komplett im Sale </span>
-  </div>
+
+  <header>
+    <nav>
+       <ul class="topnav">
+        <input id="search" type="text" placeholder="Suche...">
+        <h1 >Wolken im Sale</h1> 
+        <img src="pics/icons8-cloud-100.png" alt="logo">
+        </ul>
+     </nav>
+           
+        
+    </div>
+</header>
+<body>
+<main>
+  <div id="dropmenu">
+    <button id="dropbutton">Produkte</button>
+    <div id="dropinhalt">
+        <a href="#Best">Bestseller</a>
+        <a href="#Unko">Unkonventionell</a>
+        <a href="#Spec">Specials</a>
+        
+        <a href="#"><img id="cart" src="pics/shopping cart.jpg" alt="trolley_icon"></a>
+    </div>
 </div>
 
-<p style="padding:5px 15px"></p>
+<h2 id="Best"><b>Bestseller</b></h2>
+<div class="wolke">
+  <div>
+      <img src="pics/cirrus.jpg" alt="Cirruswolke">
+      <h2>Cirruswolke</h2>
+      <p class="beschreibung">Nice Wolke bro</p>
+      <p class="preis">10,00€</p>
+      <button type="button">Kaufen</button>
+  </div>
+  <div>
+    <img src="pics/cumulonimbus.jpg" alt="cumulonimbus">
+    <h2>Cumulonimbuswolke</h2>
+    <p class="beschreibung">Wenn du Gewitter magst, genau deine Wolke</p>
+    <p class="preis">320,00€</p>
+    <button type="button">Kaufen</button>
+</div>
+<div>
+  <img src="pics/stratus.jpg" alt="Stratus">
+  <h2>Stratuswolke</h2>
+  <p class="beschreibung"> Ein Furtwangen Depression Classic</p>
+  <p class="preis">10,00€</p>
+  <button type="button">big sad</button>
+</div>
+<div>
+  <img src="pics/nimbostratus.jpg" alt="nimbostratus">
+  <h2>Nimbostratuswolke</h2>
+  <p class="beschreibung">Erzeugen lange anhaltenden Regen: Deutsche Landwirte küssen deine Augen.</p>
+  <p class="preis">100,00€</p>
+  <button type="button">Kaufen</button>
+</div>
+<div>
+  <img src="pics/altostratus.jpg" alt="altostratus">
+  <h2>Altostratuswolke</h2>
+  <p class="beschreibung">absoluter Schmodder</p>
+  <p class="preis">1,40€</p>
+  <button type="button">Kaufen</button>
+</div>
+<div>
+  <img src="pics/cirrostratus.jpg" alt="cirrostratus">
+  <h2>Cirrostratusswolke</h2>
+  <p class="beschreibung">Fusion aus Cirrus und Stratus: Erzeugt (mit Glück) schöne Kreise</p>
+  <p class="preis">101,00€</p>
+  <button type="button">Kaufen</button>
+</div>
+</div>
+<h2 id="Unko"><b>Unkonventionell</b></h2>
 
+<div class="wolke">
+  <div>
+      <img src="pics/AKW.jpg" alt="Abdampf">
+      <h2>Kraftwerkabdampf</h2>
+      <p class="beschreibung">pfui</p>
+      <p style="color:crimson" class="preis">Nicht verfügbar</p>
+      <button type="button">Kaufen</button>
+  </div>
+  <div>
+    <img src="pics/lila wolken.jpg" alt="Lila Wolken">
+    <h2>Lila Wolken</h2>
+    <p class="beschreibung">30 Grad, du kühlst dein Kopf am Fensterglas</p>
+    <p class="preis">suchst den</p>
+    <button type="button"onclick="alert('Du bleibst wach')">Zeitlupenknopf</button>
+</div>
+<div>
+  <img src="pics/vulkanausbruch.jpg" alt="Vulkan">
+  <h2>Aschewolke</h2>
+  <p class="beschreibung">Abriss</p>
+  <p class="preis">2,00€</p>
+  <button type="button">Kaufen</button>
+</div>
+</div>
+<h2 id="Spec"><b>Specials</b></h2>
+<div class="wolke">
+  <div>
+      <img src="pics/wolke7.jpg" alt="cloud9">
+      <h2>Wolke 7</h2>
+      <p class="beschreibung">Die wahre Liebe</p>
+      <p class="preis">69696969,69€</p>
+      <button type="button">Kaufen</button>
+  </div>
+  <div>
+    <img src="pics/daweeeeeeeed.jpg" alt="boof">
+    <h2>Diese andere Wolke</h2>
+    <p class="beschreibung">shhh</p>
+    <p class="preis">4,20€</p>
+    <button type="button">Kaufen</button>
+</div>
+<div>
+  <img src="pics/icloud.jpg" alt="iCloud">
+  <h2>5GB iCloud</h2>
+  <p class="beschreibung">evt. scam</p>
+  <p class="preis">40,00€</p>
+  <button type="button">Kaufen</button>
+</div>
+</div>
+</main>  
 </body>
+
 </html>
