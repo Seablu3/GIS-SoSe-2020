@@ -47,18 +47,22 @@ body{
        position: relative;
      }} */
 
-  @media (max-width:1000px) {
+  @media (max-width:1024px) {
  #headerbg {
     background: url("wolkenheader3.jpg") no-repeat;
     width: 90%;
     height: 200px;
     position: relative;
     font-size: 40px;}
+    .flex-container{
+        flex-direction: row;
+    }
     .flex-container > div {
         background-color:rgb(106, 137, 163);
         margin: 10px;
         padding: 10px;
-        margin-left: 0px;
+        padding-left: 10px;
+        position: center;
        
         flex: 150px, 500px ;
         
@@ -90,13 +94,16 @@ body{
 
 
 
-  @media (max-width:480px) {
+  @media (max-width:600px) {
     #headerbg {
         background: url("wolkenheader3.jpg") no-repeat;
         width: 85%;
         height: 150px;
         position: relative;
         font-size: 40px;}
+        .flex-container{
+            flex-direction: row;
+        }
         .flex-container > div {
             background-color:rgb(106, 137, 163);
             margin: 10px;
@@ -128,6 +135,14 @@ body{
             font-size: 10px;
             text-align: center;
     
+        }
+        .naviListe {
+            background-color:gray;
+            border-radius: 0px;
+            display: inline;
+            list-style: none; 
+            padding: 0px; 
+            text-align: center;
         }
      }
 
@@ -208,8 +223,10 @@ body{
     .flex-container {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: row;
        justify-content: center, space-around;
        align-items: center;
+       position: center;
       }
       
       .flex-container > div {
@@ -217,15 +234,14 @@ body{
         margin: 10px;
         padding: 20px;
         margin-left: 0px;
-       
         flex: 350px, 500px ;
-        
       }
       .artikel{
         width: 340px;
         height: 500px;
         line-height: 0.5;
         border-style: groove;
+        position: center;
     }
 
       div > div > h3{
@@ -239,9 +255,6 @@ body{
         font-size: 20px;
         color: slateblue ;
         
-        
-        
-       
     }
     div > img {
         border-radius: 10px;
