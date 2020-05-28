@@ -1,12 +1,196 @@
-.bgimg-1, .bgimg-2, .bgimg-3 {
-    position: relative;
-    opacity: 0.65;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-image: url(pics/wolkenheader.jpg);
+  background-size: 2000px;
+  text-align: center;
+}
+
+#cart{
+  height: 30px;
+  width: 30px;
+}
+header {
+  text-align: center;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  height: 200px;
+}
+
+
+ul.topnav h1{
+  float: middle;
+  font-size: 35px;
+  color: lightskyblue;
+  opacity: 70%;
+}
+
+.topnav a:hover {
   
+  opacity: 69%;
+}
+
+
+
+#dropmenu{
+  position: absolute;
+  display: inline-block;
+  right: 0px;
+  margin: 1px;
+  padding: 10px;
+  position: fixed;
+  z-index: 100;
+}
+
+#dropbutton{
+  background-color: white;
+  color:cornflowerblue;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  border: 2px solid rgb(0, 140, 255);
+  cursor: pointer;
+  z-index: 100;
+}
+
+#dropinhalt{
+  display: none;
+  position: absolute;
+  right: 10px;
+  background-color:lightcyan;
+  min-width: 160px;
+  z-index: 100;
+}
+
+#dropinhalt a{
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+#dropinhalt a:hover{
+  background-color: lightsteelblue;
+}
+
+#dropmenu:hover #dropinhalt{
+  display: block;
+}
+
+#dropmenu:hover #dropbutton {
+  background-color:lightsteelblue;
+  transition: linear 0,5s;
+} 
+
+.wolke{
+  margin: 25px;
+  display: grid; 
+  padding: 10px;
+  gap: 10px;
+  text-align: center;
+  grid-template-columns: repeat(3, 33.3%);
+  opacity: 80%;
+}
+
+.wolke>div:hover{
+  opacity: 69%;
+  background-color: lightskyblue;
+}
+
+.wolke > div{  
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
+  border: 2px;
+  border-style: solid ;
+  border-color: cornflowerblue;
+  border-radius: 15px;
+}
+
+.wolke + p{
+  margin: 40px;
+}
+
+div button{
+  color: bisque;
+  background-color: steelblue;
+  margin: auto;
+  margin-bottom: 25px;
+  box-shadow: grey 3px 3px ;
+  border-radius: 5px;
+}
+
+div > button:hover{
+  opacity: 0.75;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+img[src$=".jpg"]{
+  height: 190px;
+  width: 250px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+
+@media screen and (max-width: 1024px){
+  .wolke{
+      grid-template-columns: repeat(2, 50%);
   }
-  .bgimg-1 {
-    background-image: url("wolkenheader.jpg");
-    height: 100%;
+
+  img[src$=".jpg"]{
+      height: 150px;
+     
+      border-radius: 10px;
   }
+  #dropbutton{
+      font-size: 10px;
+  }
+  #dropinhalt{
+font-size:8px;
+padding: 2px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .wolke{
+      grid-template-columns: 95%;
+  }
+ header > nav > ul > img {
+   height: 30px;
+ }
+  img[src$=".jpg"] {
+      height: 100px;
+      width:150px;
+      border-radius: 5px;
+  }
+ 
+  ul.topnav h1{
+    font-size: 28px;
+  }
+  ul.topnav li {
+      float: none;
+  }
+  #dropbutton{
+    font-size: 8px;
+}
+#cart{
+  height: 14px;
+  width: 14px;
+}
+ul.topnav {
+    
+  height: 130px;
+}
+#dropinhalt{
+font-size:7px;
+}
+
+  }
+
