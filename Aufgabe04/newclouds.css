@@ -13,7 +13,7 @@ header {
   text-align: center;
 }
 
-ul.topnav {
+div.topnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -23,11 +23,12 @@ ul.topnav {
 }
 
 
-ul.topnav h1{
+div.topnav h1{
   float: middle;
   font-size: 35px;
   color: lightskyblue;
-  opacity: 70%;
+  display: block;
+  background-image: url(pics/wolkenheader.jpg);
 }
 
 .topnav a:hover {
@@ -85,7 +86,9 @@ ul.topnav h1{
   background-color:lightsteelblue;
   transition: linear 0,5s;
 } 
-
+.h1{
+  color: skyblue;
+}
 .wolke{
   margin: 25px;
   display: grid; 
