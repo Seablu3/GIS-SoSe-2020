@@ -149,7 +149,7 @@ img[src$=".jpg"]{
 
   img[src$=".jpg"]{
       height: 150px;
-     
+    width: 210;
       border-radius: 10px;
   }
   #dropbutton{
