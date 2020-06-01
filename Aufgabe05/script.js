@@ -10,7 +10,7 @@ let cirrostratus = { img: "pics/cirrostratus.jpg", name: "Cirrostratuswolke", de
 let bestsellerW = [cirrus, cumulonimbus, stratus, nimbostratus, altostratus, cirrostratus];
 //Unkonventionelle Wolken
 let kraftwerkabdampf = { img: "pics/AKW.jpg", name: "Kraftwerkabdampf", description: "pfui", price: 777777777777.77 + "€" };
-let lilawolken = { img: "pics/lilawolken.jpg", name: "Lila Wolken", description: "30 Grad, du kühlst dein Kompf am", price: 0.01 + "€" };
+let lilawolken = { img: "pics/lilawolken.jpg", name: "Lila Wolken", description: "30 Grad, du kühlst dein Kompf am Fensterglas", price: 0.01 + "€" };
 let aschewolke = { img: "pics/vulkanausbruch.jpg", name: "Aschewolke", description: "Abriss", price: 1.50 + "€" };
 //Array Unkonventionelle
 let unkonventionelleW = [kraftwerkabdampf, lilawolken, aschewolke];
@@ -70,7 +70,7 @@ for (let index = 0; index < unkonventionelleW.length; index++) {
     document.getElementById("div2" + index)?.appendChild(description);
     //Preis
     let price = document.createElement("p");
-    description.innerHTML = unkonventionelleW[index].description;
+    price.innerHTML = unkonventionelleW[index].price;
     document.getElementById("div2" + index)?.appendChild(price);
     //Kaufen
     let kaufen = document.createElement("button");
