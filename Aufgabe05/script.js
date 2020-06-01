@@ -1,30 +1,25 @@
 "use strict";
 //Bestseller wolken
-let cirrus = { img: "pics/cirrus.jpg", name: "Cirruswolke", description: "Nice Wolke", price:"11,50€" };
-let cumulonimbus = { img: "pics/cumulonimbus.jpg", name: "Cumulonimbuswolke", description: "Wenn du Gewitter magst, genau deine Wolke", price:"1100,00€" };
-let stratus = { img: "pics/stratus.jpg", name: "Stratuswolke", description: "Ein 'Furtwangen Depression' Classic", price:"2,00€" };
-let nimbostratus = { img: "pics/nimbostratus.jpg", name: "Nimbostratuswolke€", description: "Erzeugen lange anhaltenden Regen: Deutsche Landwirte küssen deine Augen.", price:"200,00€" };
-let altostratus = { img: "pics/altostratus.jpg", name: "Altostratuswolke", description: "Absoluter Schmodder", price:"10,00€" };
-let cirrostratus = { img: "pics/cirrostratus.jpg", name: "Cirrostratuswolke", description: "Fusion aus Cirrus und Stratus: Erzeugt (mit Glück) schöne Kreise", price:"50,00€" };
+let cirrus = { img: "pics/cirrus.jpg", name: "Cirruswolke", description: "Nice Wolke", price: "11,50€" };
+let cumulonimbus = { img: "pics/cumulonimbus.jpg", name: "Cumulonimbuswolke", description: "Wenn du Gewitter magst, genau deine Wolke", price: "1100,00€" };
+let stratus = { img: "pics/stratus.jpg", name: "Stratuswolke", description: "Ein 'Furtwangen Depression' Classic", price: "2,00€" };
+let nimbostratus = { img: "pics/nimbostratus.jpg", name: "Nimbostratuswolke€", description: "Erzeugen lange anhaltenden Regen: Deutsche Landwirte küssen deine Augen.", price: "200,00€" };
+let altostratus = { img: "pics/altostratus.jpg", name: "Altostratuswolke", description: "Absoluter Schmodder", price: "10,00€" };
+let cirrostratus = { img: "pics/cirrostratus.jpg", name: "Cirrostratuswolke", description: "Fusion aus Cirrus und Stratus: Erzeugt (mit Glück) schöne Kreise", price: "50,00€" };
 //Array Bestseller
-let BestsellerW=[cirrus, cumulonimbus, stratus, nimbostratus, altostratus, cirrostratus];
-
+let BestsellerW = [cirrus, cumulonimbus, stratus, nimbostratus, altostratus, cirrostratus];
 //Unkonventionelle Wolken
-let kraftwerkabdampf = { img: "pics/AKW.jpg", name: "Kraftwerkabdampf", description: "pfui", price:"nicht verfügbar" };
-let lilawolken = { img: "pics/lilawolken.jpg", name: "Lila Wolken", description: "30 Grad, du kühlst dein Kompf am", price:"Fensterglas" };
-let aschewolke = { img: "pics/vulkanausbruch.jpg", name: "Aschewolke", description: "Abriss", price:"1,50€" };
+let kraftwerkabdampf = { img: "pics/AKW.jpg", name: "Kraftwerkabdampf", description: "pfui", price: "nicht verfügbar" };
+let lilawolken = { img: "pics/lilawolken.jpg", name: "Lila Wolken", description: "30 Grad, du kühlst dein Kompf am", price: "Fensterglas" };
+let aschewolke = { img: "pics/vulkanausbruch.jpg", name: "Aschewolke", description: "Abriss", price: "1,50€" };
 //Array Unkonventionelle
-let UnkonventionelleW=[kraftwerkabdampf, lilawolken, aschewolke];
-
+let UnkonventionelleW = [kraftwerkabdampf, lilawolken, aschewolke];
 //Special Wolken
-let wolke7 = { img: "pics/wolke7.jpg", name: "Wolke7", description: "Die wahre Liebe", price:"696969,69€" };
-let andereWolke = { img: "pics/daweeeeeeeed.jpg", name: "Diese andere Wolke", description: "gas gas", price:"4,20€" };
-let icloud = { img: "pics/icloud.jpg", name: "iCloud Speicher", description: "scameriono", price:"1111,10€" };
+let wolke7 = { img: "pics/wolke7.jpg", name: "Wolke7", description: "Die wahre Liebe", price: "696969,69€" };
+let andereWolke = { img: "pics/daweeeeeeeed.jpg", name: "Diese andere Wolke", description: "gas gas", price: "4,20€" };
+let icloud = { img: "pics/icloud.jpg", name: "iCloud Speicher", description: "scameriono", price: "1111,10€" };
 //Array Specials
-let SpecialsW=[wolke7,andereWolke,icloud];
-
-
-
+let SpecialsW = [wolke7, andereWolke, icloud];
 //Bestseller for schleife 
 for (let index = 0; index < BestsellerW.length; index++) {
     //Div erstellen 
@@ -52,7 +47,6 @@ for (let index = 0; index < BestsellerW.length; index++) {
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div1" + index)?.appendChild(kaufen);
 }
-
 //Unkonventionelle for schleife 
 for (let index = 0; index < UnkonventionelleW.length; index++) {
     //Div erstellen
@@ -80,9 +74,8 @@ for (let index = 0; index < UnkonventionelleW.length; index++) {
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div2" + index)?.appendChild(kaufen);
 }
-
 //Specials for schleife 
-for (let index = 0; index <SpecialsW.length; index++) {
+for (let index = 0; index < SpecialsW.length; index++) {
     //Div erstellen
     let newDiv = document.createElement("div");
     newDiv.id = "div3" + index;
