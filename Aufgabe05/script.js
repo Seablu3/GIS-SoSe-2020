@@ -34,7 +34,7 @@ for (let index = 0; index < bestsellerW.length; index++) {
     let name = document.createElement("h2");
     name.innerHTML = bestsellerW[index].name;
     document.getElementById("div1" + index)?.appendChild(name);
-    //Beschreibung
+    //Beschreibung bobobobob
     let description = document.createElement("p");
     description.innerHTML = bestsellerW[index].description;
     document.getElementById("div1" + index)?.appendChild(description);
