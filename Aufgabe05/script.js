@@ -70,6 +70,7 @@ for (let index = 0; index < unkonventionelleW.length; index++) {
     document.getElementById("div2" + index)?.appendChild(description);
     //Preis
     let price = document.createElement("p");
+    description.innerHTML = unkonventionelleW[index].description;
     document.getElementById("div2" + index)?.appendChild(price);
     //Kaufen
     let kaufen = document.createElement("button");
