@@ -42,10 +42,7 @@ for (let index = 0; index < bestsellerW.length; index++) {
     let price = document.createElement("p");
     price.innerHTML = bestsellerW[index].price;
     document.getElementById("div1" + index)?.appendChild(price);
-    // let price: HTMLElement = document.createElement("p");
-    // let produktPreisStrong: HTMLElement = document.createElement("strong");
-    // artikelcontainer.appendChild(produktPreis);
-    //Kaufen
+   
     let kaufen = document.createElement("button");
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div1" + index)?.appendChild(kaufen);
