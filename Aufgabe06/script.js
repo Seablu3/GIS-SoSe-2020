@@ -130,6 +130,7 @@ function hideKategorien(_event) {
         (document.getElementById("grid3")).style.display = "none";
         (document.getElementById("Unko")).style.display = "none";
         (document.getElementById("Spec")).style.display = "none";
+        (document.getElementById("Best")).style.display = "block";
     }
     //Nur Unkonventionelle anzeigen
     else if (_event.currentTarget.getAttribute("id") == "kat2") {
@@ -138,6 +139,7 @@ function hideKategorien(_event) {
         (document.getElementById("grid3")).style.display = "none";
         (document.getElementById("Best")).style.display = "none";
         (document.getElementById("Spec")).style.display = "none";
+        (document.getElementById("Unko")).style.display = "block";
     }
     //Nur Specials anzeigen        
     else if (_event.currentTarget.getAttribute("id") == "kat3") {
@@ -146,6 +148,7 @@ function hideKategorien(_event) {
         (document.getElementById("grid2")).style.display = "none";
         (document.getElementById("Best")).style.display = "none";
         (document.getElementById("Unko")).style.display = "none";
+        (document.getElementById("Spec")).style.display = "block";
     }
     //Alle Kategorien anzeigen        
     else if (_event.currentTarget.getAttribute("id") == "kat4") {
