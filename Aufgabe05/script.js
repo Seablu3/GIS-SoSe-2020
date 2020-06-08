@@ -1,3 +1,4 @@
+"use strict";
 let cirrus = { img: "pics/cirrus.jpg", name: "Cirruswolke", description: "Nice Wolke", price: 11.50 };
 let cumulonimbus = { img: "pics/cumulonimbus.jpg", name: "Cumulonimbuswolke", description: "Wenn du Gewitter magst, genau deine Wolke", price: 1100.00 };
 let stratus = { img: "pics/stratus.jpg", name: "Stratuswolke", description: "Ein 'Furtwangen Depression' Classic", price: 2.00 };
@@ -44,6 +45,7 @@ for (let index = 0; index < bestsellerW.length; index++) {
     let kaufen = document.createElement("button");
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div1" + index)?.appendChild(kaufen);
+    newDiv.appendChild(kaufen);
 }
 //Unkonventionelle for schleife 
 for (let index = 0; index < unkonventionelleW.length; index++) {
@@ -99,5 +101,7 @@ for (let index = 0; index < specialsW.length; index++) {
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div3" + index)?.appendChild(kaufen);
 }
-//# sourceMappingURL=script.js.map    bobobo
+let ergebnis = 0;
+let temp = 0;
+let artikelZaehler = 0;
 //# sourceMappingURL=script.js.map
