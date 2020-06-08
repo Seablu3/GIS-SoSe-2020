@@ -54,12 +54,13 @@ for (let index = 0; index < bestsellerW1.length; index++) {
     //Preis
     let price = document.createElement("p");
     price.innerHTML = bestsellerW1[index].price + "€"; 
+    document.getElementById("div1" + index)?.appendChild(price);
+
     //Kaufen
     let kaufen = document.createElement("button");
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div1" + index)?.appendChild(kaufen);
-    document.addEventListener("click", handleTrolley);
-    kaufen.setAttribute("preis", bestsellerW[index].price.toString());
+    kaufen.addEventListener("click", handleTrolley);
 }
 
 //Unkonventionelle for schleife 
@@ -88,8 +89,7 @@ for (let index = 0; index < unkonventionelleW1.length; index++) {
     let kaufen = document.createElement("button");
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div2" + index)?.appendChild(kaufen);
-    document.addEventListener("click", handleTrolley);
-    kaufen.setAttribute("preis", unkonventionelleW1[index].price.toString());
+    kaufen.addEventListener("click", handleTrolley);
     
 }
 
@@ -118,8 +118,9 @@ for (let index = 0; index < specialsW1.length; index++) {
     //Kaufen
     let kaufen = document.createElement("button");
     kaufen.innerHTML = "Kaufen";
-    document.getElementById("div3" + index)?.appendChild(kaufen);
     kaufen.addEventListener("click", handleTrolley);
+    document.getElementById("div3" + index)?.appendChild(kaufen);
+
     kaufen.setAttribute("preis", specialsW1[index].price.toString());
     
 }
@@ -128,14 +129,15 @@ let count = 0;
 let artikelCounter = 0;
 let blasenDiv = document.createElement("div");
 
+
 function handleTrolley(_event: Event) {
     if (artikelCounter >= 0) {
         document.getElementById("warencounter")?.appendChild(blasenDiv);
     }
     artikelCounter++;
     blasenDiv.innerHTML = artikelCounter + "";
-    if (_event.currentTarget?.getAttribute("preis")) {
-        summe = count + parseInt(_event.currentTarget?.getAttribute("preis"));
+    if (_event.currentTarget?.getAttribute("price")) {
+        summe = count + parseInt(_event.currentTarget?.getAttribute("price"));
         count = summe;
     }
     console.log(summe.toFixed(0));
@@ -143,15 +145,3 @@ function handleTrolley(_event: Event) {
 
 
 
-// let alleButtons = document.querySelectorAll("button");
-// for (let i = 0; i < alleButtons.length; i++) {
-//     alleButtons[i].addEventListener("click", shoppingCart);
-// }
-// function shoppingCart(_event){
-//     if () {
-        
-//     } else {
-        
-//     }
-
-// }
