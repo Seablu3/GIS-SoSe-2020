@@ -12,6 +12,20 @@ body{
 header {
   text-align: center;
 }
+#katDiv{
+color: lightskyblue;
+padding: 10px;
+}
+#katDiv a:hover{
+  color: black;
+  font-style: italic;
+  
+}
+
+#warencounter{
+background-color: lightskyblue;
+opacity: 90%;
+}
 
 div.topnav {
   list-style-type: none;
