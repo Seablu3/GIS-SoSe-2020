@@ -31,10 +31,10 @@ let icloud1: Artikel = { img: "pics/icloud.jpg", name: "iCloud Speicher", descri
 //Array Specials
 let specialsW1 = [wolke71, andereWolke1, icloud1];  
 
- 
 
 //Bestseller for schleife 
 for (let index = 0; index < bestsellerW1.length; index++) {
+    
     //Div erstellen 
     let newDiv = document.createElement("div");
     newDiv.id = "div1" + index;
@@ -61,10 +61,12 @@ for (let index = 0; index < bestsellerW1.length; index++) {
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div1" + index)?.appendChild(kaufen);
     kaufen.addEventListener("click", handleTrolley);
+    kaufen.setAttribute("preis", bestsellerW1[index].price.toString());
 }
 
 //Unkonventionelle for schleife 
 for (let index = 0; index < unkonventionelleW1.length; index++) {
+  
     //Div erstellen
     let newDiv = document.createElement("div");
     newDiv.id = "div2" + index;
@@ -90,11 +92,12 @@ for (let index = 0; index < unkonventionelleW1.length; index++) {
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div2" + index)?.appendChild(kaufen);
     kaufen.addEventListener("click", handleTrolley);
-    
+    kaufen.setAttribute("preis", unkonventionelleW1[index].price.toString());
 }
 
 //Specials for schleife 
 for (let index = 0; index < specialsW1.length; index++) {
+    
     //Div erstellen
     let newDiv = document.createElement("div");
     newDiv.id = "div3" + index;
@@ -120,28 +123,64 @@ for (let index = 0; index < specialsW1.length; index++) {
     kaufen.innerHTML = "Kaufen";
     kaufen.addEventListener("click", handleTrolley);
     document.getElementById("div3" + index)?.appendChild(kaufen);
-
     kaufen.setAttribute("preis", specialsW1[index].price.toString());
-    
 }
-let summe = 0;
-let count = 0;
-let artikelCounter = 0;
+
+
+//Einkaufswagen Funktion
+
+let summe: number = 0;
+let artikelCounter: number = 0;
 let blasenDiv = document.createElement("div");
-
-
 function handleTrolley(_event: Event) {
-    if (artikelCounter >= 0) {
-        document.getElementById("warencounter")?.appendChild(blasenDiv);
-    }
+    document.getElementById("warencounter")?.appendChild(blasenDiv);
     artikelCounter++;
-    blasenDiv.innerHTML = artikelCounter + "";
-    if (_event.currentTarget?.getAttribute("price")) {
-        summe = count + parseInt(_event.currentTarget?.getAttribute("price"));
-        count = summe;
-    }
+    blasenDiv.innerHTML = artikelCounter.toString();
+    summe += parseInt((<HTMLButtonElement>_event.currentTarget)?.getAttribute("preis")!);
     console.log(summe.toFixed(0));
 }
 
 
+//Kategorie Funktion (werde für die nächste Aufgabe meine Artikel sowie diese Funktion als for-schleife umschreiben)
 
+document.getElementById("kat1")?.addEventListener("click", hideKategorien);
+document.getElementById("kat2")?.addEventListener("click", hideKategorien);
+document.getElementById("kat3")?.addEventListener("click", hideKategorien);
+document.getElementById("kat4")?.addEventListener("click", hideKategorien);
+
+function hideKategorien(_event: Event) {
+    //Nur Bestseller anzeigen
+   if ((<HTMLElement>_event.currentTarget).getAttribute("id") == "kat1") {
+        (document.getElementById("grid1")!).style.display = "grid";
+        (document.getElementById("grid2")!).style.display = "none";
+        (document.getElementById("grid3")!).style.display = "none";
+        (document.getElementById("Unko")!).style.display = "none";
+        (document.getElementById("Spec")!).style.display = "none";
+            }
+            //Nur Unkonventionelle anzeigen
+        else if ((<HTMLElement>_event.currentTarget).getAttribute("id") == "kat2") {
+            (document.getElementById("grid2")!).style.display = "grid";
+            (document.getElementById("grid1")!).style.display = "none";
+            (document.getElementById("grid3")!).style.display = "none";
+            (document.getElementById("Best")!).style.display = "none";
+            (document.getElementById("Spec")!).style.display = "none";
+                    }
+            //Nur Specials anzeigen        
+        else if ((<HTMLElement>_event.currentTarget).getAttribute("id") == "kat3") {
+            (document.getElementById("grid3")!).style.display = "grid";
+            (document.getElementById("grid1")!).style.display = "none";
+            (document.getElementById("grid2")!).style.display = "none";
+            (document.getElementById("Best")!).style.display = "none";
+            (document.getElementById("Unko")!).style.display = "none";
+                    }
+            //Alle Kategorien anzeigen        
+        else if ((<HTMLElement>_event.currentTarget).getAttribute("id") == "kat4") {
+            (document.getElementById("grid3")!).style.display = "grid";
+            (document.getElementById("grid1")!).style.display = "grid";
+            (document.getElementById("grid2")!).style.display = "grid";
+            (document.getElementById("Best")!).style.display = "block";
+            (document.getElementById("Unko")!).style.display = "block";
+            (document.getElementById("Spec")!).style.display = "block";
+                    }         
+              
+}
