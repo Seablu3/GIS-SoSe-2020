@@ -46,6 +46,7 @@ for (let index = 0; index < bestsellerW1.length; index++) {
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div1" + index)?.appendChild(kaufen);
     kaufen.addEventListener("click", handleTrolley);
+    kaufen.setAttribute("preis", bestsellerW1[index].price.toString());
 }
 //Unkonventionelle for schleife 
 for (let index = 0; index < unkonventionelleW1.length; index++) {
@@ -74,6 +75,7 @@ for (let index = 0; index < unkonventionelleW1.length; index++) {
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div2" + index)?.appendChild(kaufen);
     kaufen.addEventListener("click", handleTrolley);
+    kaufen.setAttribute("preis", unkonventionelleW1[index].price.toString());
 }
 //Specials for schleife 
 for (let index = 0; index < specialsW1.length; index++) {
@@ -104,20 +106,55 @@ for (let index = 0; index < specialsW1.length; index++) {
     document.getElementById("div3" + index)?.appendChild(kaufen);
     kaufen.setAttribute("preis", specialsW1[index].price.toString());
 }
+//Einkaufswagen Funktion
 let summe = 0;
-let count = 0;
 let artikelCounter = 0;
 let blasenDiv = document.createElement("div");
 function handleTrolley(_event) {
-    if (artikelCounter >= 0) {
-        document.getElementById("warencounter")?.appendChild(blasenDiv);
-    }
+    document.getElementById("warencounter")?.appendChild(blasenDiv);
     artikelCounter++;
-    blasenDiv.innerHTML = artikelCounter + "";
-    if (_event.currentTarget?.getAttribute("price")) {
-        summe = count + parseInt(_event.currentTarget?.getAttribute("price"));
-        count = summe;
-    }
+    blasenDiv.innerHTML = artikelCounter.toString();
+    summe += parseInt(_event.currentTarget?.getAttribute("preis"));
     console.log(summe.toFixed(0));
+}
+//Kategorie Funktion (werde für die nächste Aufgabe meine Artikel sowie diese Funktion als for-schleife umschreiben)
+document.getElementById("kat1")?.addEventListener("click", hideKategorien);
+document.getElementById("kat2")?.addEventListener("click", hideKategorien);
+document.getElementById("kat3")?.addEventListener("click", hideKategorien);
+document.getElementById("kat4")?.addEventListener("click", hideKategorien);
+function hideKategorien(_event) {
+    //Nur Bestseller anzeigen
+    if (_event.currentTarget.getAttribute("id") == "kat1") {
+        (document.getElementById("grid1")).style.display = "grid";
+        (document.getElementById("grid2")).style.display = "none";
+        (document.getElementById("grid3")).style.display = "none";
+        (document.getElementById("Unko")).style.display = "none";
+        (document.getElementById("Spec")).style.display = "none";
+    }
+    //Nur Unkonventionelle anzeigen
+    else if (_event.currentTarget.getAttribute("id") == "kat2") {
+        (document.getElementById("grid2")).style.display = "grid";
+        (document.getElementById("grid1")).style.display = "none";
+        (document.getElementById("grid3")).style.display = "none";
+        (document.getElementById("Best")).style.display = "none";
+        (document.getElementById("Spec")).style.display = "none";
+    }
+    //Nur Specials anzeigen        
+    else if (_event.currentTarget.getAttribute("id") == "kat3") {
+        (document.getElementById("grid3")).style.display = "grid";
+        (document.getElementById("grid1")).style.display = "none";
+        (document.getElementById("grid2")).style.display = "none";
+        (document.getElementById("Best")).style.display = "none";
+        (document.getElementById("Unko")).style.display = "none";
+    }
+    //Alle Kategorien anzeigen        
+    else if (_event.currentTarget.getAttribute("id") == "kat4") {
+        (document.getElementById("grid3")).style.display = "grid";
+        (document.getElementById("grid1")).style.display = "grid";
+        (document.getElementById("grid2")).style.display = "grid";
+        (document.getElementById("Best")).style.display = "block";
+        (document.getElementById("Unko")).style.display = "block";
+        (document.getElementById("Spec")).style.display = "block";
+    }
 }
 //# sourceMappingURL=script.js.map
