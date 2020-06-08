@@ -63,6 +63,7 @@ for (let index = 0; index < bestsellerW.length; index++) {
     let kaufen = document.createElement("button");
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div1" + index)?.appendChild(kaufen);
+    newDiv.appendChild(kaufen);
 }
 
 //Unkonventionelle for schleife 
@@ -120,4 +121,6 @@ for (let index = 0; index < specialsW.length; index++) {
     kaufen.innerHTML = "Kaufen";
     document.getElementById("div3" + index)?.appendChild(kaufen);
 }
-//# sourceMappingURL=script.js.map    bobobo
+let ergebnis = 0;
+let temp = 0;
+let artikelZaehler = 0;
