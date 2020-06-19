@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/timknoop/GIS-SoSe-2020.git"
+    "url": "git+https://github.com/Seablu3/GIS-SoSe-2020.git"
   },
-  "author": "timknoop",
+  "author": "Seablu3",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/timknoop/GIS-SoSe-2020/issues"
+    "url": "https://github.com/Seablu3/GIS-SoSe-2020/issues"
   },
-  "homepage": "https://github.com/timknoop/GIS-SoSe-2020#readme"
+  "homepage": "https://github.com/Seablu3/GIS-SoSe-2020#readme"
 }
