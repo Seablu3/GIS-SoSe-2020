@@ -1,36 +1,37 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.A08Server = void 0;
+// Modul http wird geladen, variable Http zugewiesen
 const Http = require("http");
 var A08Server;
 (function (A08Server) {
-    //Konsolenausgabe
+    //Konsole sagt Starting server
     console.log("Starting server");
-    //Variable port + Zuweisung
+    //port 
     let port = Number(process.env.PORT);
-    //Überprüfung port + ggf. Festlegung
+    //Überprüfung port , falls nicht vorhanden wird port 8100 zugewiesen
     if (!port)
         port = 8100;
-    //Erstellung Variable server
+    //initialisierung Server
     let server = Http.createServer();
     //Handler wird hinzugefügt
     server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
-    //Server "hört" auf port, für Anfragen
+    //Server lauscht dem port
     server.listen(port);
-    //Konsolenausgabe
+    //Konsole sagt sie hört zu
     function handleListen() {
         console.log("Listening");
     }
     function handleRequest(_request, _response) {
-        //Konsolenausgabe
+        //Konsole sagt nein
         console.log("I hear voices!");
         //Parameter Reponse-Header
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
-        //Ausgabe URL
+        //URL wird ausgegeben
         _response.write(_request.url);
-        //Reponse Ende
+        //Reponse wird beendet
         _response.end();
     }
 })(A08Server = exports.A08Server || (exports.A08Server = {}));
