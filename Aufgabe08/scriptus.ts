@@ -2,7 +2,7 @@ var Aufgabe08;
 (function (Aufgabe08) {
     let initButton = document.getElementById("initButton");
     initButton?.addEventListener("click", communicate);
-    async function communiacate() {
+    async function communicate() {
         let formData = new FormData(document.forms[0]);
         let url = "https://moselgisdorsch.herokuapp.com";
         let query = new URLSearchParams(formData);
