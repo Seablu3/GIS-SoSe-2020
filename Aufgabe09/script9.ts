@@ -1,29 +1,29 @@
 var Aufgabe09;
 (function (Aufgabe09) {
-    let formData;
-    let buttonHTMLcomm = document.getElementById("htmlB");
+    let formData: FormData;
+    let buttonHTMLcomm: HTMLButtonElement = <HTMLButtonElement>document.getElementById("htmlB");
     buttonHTMLcomm.addEventListener("click", handleHtml);
-    let submitB = document.getElementById("jsonB");
+    let submitB:HTMLButtonElement =<HTMLButtonElement> document.getElementById("jsonB");
     submitB.addEventListener("click", handleJson);
     //HTML
-    async function handleHtml() {
+    async function handleHtml(): Promise<void> {
         formData = new FormData(document.forms[0]);
         let url = "https://moselgisdorsch.herokuapp.com/";
         url += "/html";
-        let query = new URLSearchParams(formData);
+        let query = new URLSearchParams(<any> formData);
         
         url += "?" + query.toString();
         let response = await fetch(url);
         let responseText = await response.text();
-        let serverResponse = document.getElementById("serverResponse");
+        let serverResponse: HTMLElement = <HTMLElement> document.getElementById("serverResponse");
         serverResponse.innerHTML = responseText;
     }
     //JSON
-    async function handleJson() {
+    async function handleJson(): Promise<void> {
         formData = new FormData(document.forms[0]);
         let url = "https://moselgisdorsch.herokuapp.com/";
         url += "/json";
-        let query = new URLSearchParams(formData);
+        let query = new URLSearchParams(<any>formData);
         url = url + "?" + query.toString();
         let response = await fetch(url);
         let responseText = await response.json();
