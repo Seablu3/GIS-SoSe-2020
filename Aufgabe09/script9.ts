@@ -1,5 +1,5 @@
-var Aufgabe09;
-(function (Aufgabe09) {
+namespace Aufgabe09{
+
     let formData: FormData;
     let buttonHTMLcomm: HTMLButtonElement = <HTMLButtonElement>document.getElementById("htmlB");
     buttonHTMLcomm.addEventListener("click", handleHtml);
@@ -11,7 +11,7 @@ var Aufgabe09;
     async function handleHtml(): Promise<void> {
         formData = new FormData(document.forms[0]);
         let url: string = "https://moselgisdorsch.herokuapp.com/";
-        url += "/html";
+        url += "html";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url += "?" + query.toString();
 
@@ -25,7 +25,7 @@ var Aufgabe09;
     async function handleJson(): Promise<void> {
         formData = new FormData(document.forms[0]);
         let url: string = "https://moselgisdorsch.herokuapp.com/";
-        url += "/json";
+        url += "json";
         let query: URLSearchParams = new URLSearchParams(<any> formData);
         url = url + "?" + query.toString();
 
@@ -33,4 +33,4 @@ var Aufgabe09;
         let responseText: string = await response.json(); 
         console.log(responseText);
     }
-})(Aufgabe09 || (Aufgabe09 = {}));
+}

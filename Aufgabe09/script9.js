@@ -10,7 +10,7 @@ var Aufgabe09;
     async function handleHtml() {
         formData = new FormData(document.forms[0]);
         let url = "https://moselgisdorsch.herokuapp.com/";
-        url += "/html";
+        url += "html";
         let query = new URLSearchParams(formData);
         url += "?" + query.toString();
         let response = await fetch(url);
@@ -22,7 +22,7 @@ var Aufgabe09;
     async function handleJson() {
         formData = new FormData(document.forms[0]);
         let url = "https://moselgisdorsch.herokuapp.com/";
-        url += "/json";
+        url += "json";
         let query = new URLSearchParams(formData);
         url = url + "?" + query.toString();
         let response = await fetch(url);
