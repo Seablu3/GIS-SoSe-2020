@@ -10,7 +10,7 @@ var Aufgabe09;
         formData = new FormData(document.forms[0]);
         let url = "https://moselgisdorsch.herokuapp.com/";
         url += "/html";
-        let query = new URLSearchParams(<any> formData);
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
         
         url += "?" + query.toString();
         let response: Response = await fetch(url);
