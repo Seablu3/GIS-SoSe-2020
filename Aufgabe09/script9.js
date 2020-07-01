@@ -20,14 +20,6 @@ var Aufgabe09;
     }
     //JSON
     async function handleJson() {
-        // formData = new FormData(document.forms[0]);
-        // let url = "https://moselgisdorsch.herokuapp.com/";
-        // url += "/json";
-        // let query = new URLSearchParams(<any>formData);
-        // url = url + "?" + query.toString();
-        // let response = await fetch(url);
-        // let responseText = await response.json();
-        // console.log(responseText);
         formData = new FormData(document.forms[0]);
         let url = "https://moselgisdorsch.herokuapp.com/";
         url += "/json";
